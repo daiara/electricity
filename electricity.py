@@ -52,12 +52,3 @@ data = [[date,day,night]]
 save = pd.DataFrame(data=data, columns=['Date','Day','Night'])
 save_df = readings.append(save)
 save_df.to_csv("electricity.csv", index=False)
-
-"""
-USE THIS ONE FOR TESTS :)
-date = '11.07.2019'
-dt = datetime.strptime(date, "%d.%m.%Y")
-day = int(21542)
-night = int(11311)
-"""
-
