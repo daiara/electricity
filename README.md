@@ -2,10 +2,15 @@
 
 A short program to calculate how much to expect on your electric bill
 
-In the UK it's commom for the meter to use two different readings with different rates each, and a fee per day of usage.
+This program runs on Python 3
 
 To run this program you need to install the pandas library first
 > pip install pandas
+
+Then you run the program as python3 ```electricity.py```
+
+
+In the UK it's commom for the meter to use two different readings with different rates each, and a fee per day of usage.
 
 The first input will be your provider rates which are located on the back of your bill.
 
