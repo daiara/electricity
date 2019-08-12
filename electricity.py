@@ -4,6 +4,15 @@ import pandas as pd
 
 print("THE ELECTRIC BILL PROGRAM\n")
 
+def input_date(msg):
+    user_date = input(msg + " (dd.mm.yyyy) ")
+    try:
+        datetime.strptime(user_date, "%d.%m.%Y")
+        return user_date
+    except ValueError:
+        print('Invalid date. Try again.')
+        return input_date(msg)
+    
 def get_parameters(reading, time, day_in, night_in):
     date_rd = datetime.strptime(reading[0][0], "%d.%m.%Y")
     date_out = time - date_rd #How many days since the last reading
@@ -23,7 +32,7 @@ def fare(day, night, days):
     return total_cost
 
 def readings():
-    date = input("When did you do the reading? (dd.mm.yyyy) ")
+    date = input_date("When did you do the reading?")
     day = int(input("How much was the day reading? "))
     night = int(input("How much was the night reading? "))
     return date, day, night
